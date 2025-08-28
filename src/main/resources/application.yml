@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/messenger
+    username: postgres
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: false
+server:
+  port: 8080
+  address: 0.0.0.0
+jwt:
+  secret: veryveryverylongsecretkeythatissufficientlysecure123456
+  issuer: acme-messenger
+  access-ttl: PT30M
+storage:
+  root: ./uploads
+cors:
+  allowed-origins: "*"
