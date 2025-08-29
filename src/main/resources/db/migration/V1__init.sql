@@ -1,17 +1,5 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
--- CREATE TABLE users (
---        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
---        email TEXT UNIQUE NOT NULL,
---        password_hash TEXT NOT NULL,
---        display_name TEXT NOT NULL,
---        role TEXT NOT NULL DEFAULT 'ROLE_USER',
---        created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
---        last_login_at TIMESTAMPTZ
--- );
-
-
-
 CREATE TABLE IF NOT EXISTS users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     email TEXT UNIQUE NOT NULL,
@@ -21,8 +9,6 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     last_login_at TIMESTAMPTZ
     );
-
-
 
 CREATE TABLE channels (
       id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

@@ -1,14 +1,11 @@
 package com.acme.messenger.controller;
 
-
 import com.acme.messenger.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.Map;
-
 
 @RestController
 @RequestMapping("/api/auth")

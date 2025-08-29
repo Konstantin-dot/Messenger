@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-circular-references: true
   datasource:
     url: jdbc:postgresql://localhost:5432/messenger
     username: postgres
@@ -15,10 +17,12 @@ server:
   port: 8080
   address: 0.0.0.0
 jwt:
-  secret: veryveryverylongsecretkeythatissufficientlysecure123456
+  secret: secretsecretsecretsecretsecretsecret
   issuer: acme-messenger
   access-ttl: PT30M
 storage:
   root: ./uploads
 cors:
   allowed-origins: "*"
+app:
+  upload-dir=/var/messenger/uploads:
